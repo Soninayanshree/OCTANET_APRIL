@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    /* border: 2px solid red; */
+    background-color: rgb(39, 38, 38);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding: 10px;
+    /* border: 2px solid yellow; */
+}
+
+.container .title {
+    height: 13vh;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    background-color: black;
+    color: white;
+    position: fixed;
+}
+
+.title p {
+    font-size: 3rem;
+    font-weight: 800;
+    font-family: monospace;
+}
+
+.todo_list {
+    width: 100%;
+    max-width: 540px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("circle.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+.checked::before {
+    background-image: url("checkbook.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    /* border: 2px solid; */
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+@media(max-width:400px) {
+    .title p {
+        font-size: 2rem;
+        font-weight: 700;
+        font-family: monospace;
+    }
+   .row {
+        border-radius: 30px;
+        padding-left: 1px;
+        margin-bottom: 25px;
+    }
+
+    input {
+        padding: 3px;
+        font-weight: 12px;
+    }
+
+    button {
+        padding: 10px 30px;
+        font-size: 14px;
+    }
+
+    ul li {
+        font-size: 14px;
+        padding: 10px 8px 10px 40px;
+        /* border: 2px solid; */
+    }
+
+    ul li::before {
+        height: 22px;
+        width: 22px;
+        position: absolute;
+        top: 10px;
+        left: 8px;
+    }
+
+    ul li span {
+        position: absolute;
+        right: 0;
+        top: 2px;
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        color: #555;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        /* border: 2px solid; */
+    }
+}
